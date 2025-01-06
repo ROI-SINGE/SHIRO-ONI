@@ -69,7 +69,7 @@ router.get('/', async (req, res) => {
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ❷ || WhattsApp Chaîne = https://whatsapp.com/channel/0029VaxNPRkFi8xavTfPD71j
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-L'aventure commence
+L'AVENTURE COMMENCE
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ©*2025-2099 SHIRO ONI*
 _____________________________________
