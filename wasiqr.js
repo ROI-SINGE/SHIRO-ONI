@@ -60,7 +60,7 @@ router.get('/', async (req, res) => {
 	
 				   let WASI_MD_TEXT = `
 ┏━━━━━━━━━━━━━━
-┃SHIRO ON SESSION 
+┃SHIRO ONI SESSION 
 ┃L'ARME
 ┃CONNECTÉ(E) ✅🔥
 ┗━━━━━━━━━━━━━━━
