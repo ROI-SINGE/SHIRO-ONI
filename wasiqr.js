@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Wasi_Tech,
+	default: Shiro_Oni,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function WASI_MD_QR_CODE() {
+	async function SHIRO_ONI_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Wasi_Tech = Wasi_Tech({
+			let Qr_Code_By_Shiro_Oni = Wasi_Tech({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Wasi_Tech.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Wasi_Tech.ev.on("connection.update", async (s) => {
+			Qr_Code_By_Shiro_Oni.ev.on('creds.update', saveCreds)
+			Qr_Code_By_Shiro_Oni.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,9 +56,9 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id, { text: '' + b64data });
+				   let session = await Qr_Code_By_Shiro_Oni.sendMessage(Qr_Code_By_Shiro_Oni.user.id, { text: '' + b64data });
 	
-				   let WASI_MD_TEXT = `
+				   let SHIRO_ONI_TEXT = `
 ┏━━━━━━━━━━━━━━
 ┃SHIRO ONI SESSION 
 ┃L'ARME
@@ -75,16 +75,16 @@ L'AVENTURE COMMENCE
 _____________________________________
 	
 _Don't Forget To Give Star To My Repo_`
-	 await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id,{text:WASI_MD_TEXT},{quoted:session})
+	 await Qr_Code_By_Shiro_Oni.sendMessage(Qr_Code_By_Shiro_Oni.user.id,{text:SHIRO_ONI_TEXT},{quoted:session})
 
 
 
 					await delay(100);
-					await Qr_Code_By_Wasi_Tech.ws.close();
+					await Qr_Code_By_Shiro_Oni.ws.close();
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
-					WASI_MD_QR_CODE();
+					SHIRO_ONI_QR_CODE();
 				}
 			});
 		} catch (err) {
@@ -97,6 +97,6 @@ _Don't Forget To Give Star To My Repo_`
 			await removeFile("temp/" + id);
 		}
 	}
-	return await WASI_MD_QR_CODE()
-});
+	return await SHIRO_ONI_QR_CODE()
+});j
 module.exports = router
