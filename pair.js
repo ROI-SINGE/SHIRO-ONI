@@ -60,14 +60,14 @@ router.get('/', async (req, res) => {
 ┏━━━━━━━━━━━━━━
 ┃SHIRO ONI SESSION
 ┃L'ARME ACTIVE
-┃CONNECTE(E)✅🔥
+┃CONNECTÉ(E)✅🔥
 ┗━━━━━━━━━━━━━━━
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ❶ || Createur = 𖥘 SHIRO ONI
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ❷ || WhattsApp Chaîne = https://whatsapp.com/channel/0029VaxNPRkFi8xavTfPD71j
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-Please Follow My Support Channel
+L´AVENTURE COMMENCE
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ©*2025-2099 SHIRO ONI*
 
