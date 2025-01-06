@@ -1,4 +1,4 @@
-## PARCK JONGGUN
+## PARK JONGGUN
 
 <h1 align="center">  SHIRO ONI  </h1>
 <p align="center"
@@ -73,7 +73,7 @@
 
 </p>
 <p align="center">
-<a href="#"><img title="Creator" src="https://img.shields.io/badge/Creator-SHIRO-ONI-red.svg?style=for-the-badge&logo=github"></a>
+<a href="#"><img title="Creator" src="https://img.shields.io/badge/Creator-SHIRO•ONI-red.svg?style=for-the-badge&logo=github"></a>
 
 <p align="center">
 <a href="https://github.com/ROI-SINGE/SHIRO-ONI/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/ROI-SINGE/SHIRO-ONI?color=yellow&style=flat-square"></a>
