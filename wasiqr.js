@@ -65,7 +65,7 @@ router.get('/', async (req, res) => {
 ┃CONNECTED 🚬
 ┗━━━━━━━━━━━━━━━
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || Creator = 𖥘 JUNGGUN 𖥘
+❶ || Creator = 𖥘 JUNGGUN SHIRO•ONI𖥘
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ❷ || WhattsApp Channel = https://whatsapp.com/channel/0029Vaknr2JJ93wOtgkFTg15
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
