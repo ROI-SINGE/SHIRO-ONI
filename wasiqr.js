@@ -60,18 +60,18 @@ router.get('/', async (req, res) => {
 	
 				   let WASI_MD_TEXT = `
 ┏━━━━━━━━━━━━━━
-┃DARK--MD SESSION IS 
+┃SHIRO ONI SESSION IS 
 ┃SUCCESSFULLY
-┃CONNECTED 🎊🎉
+┃CONNECTED 🚬
 ┗━━━━━━━━━━━━━━━
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || Creator = 𖥘 Christian-packeur 𖥘
+❶ || Creator = 𖥘 JUNGGUN 𖥘
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❷ || WhattsApp Channel = https://whatsapp.com/channel/0029Va7jKtW9hXF6d0y1k20Y
+❷ || WhattsApp Channel = https://whatsapp.com/channel/0029Vaknr2JJ93wOtgkFTg15
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-My Number ADM  me?👉 https://was.me/+2250152857921 👈
+My Number ADM  me?👉 wa.me/241066408537 👈
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-©*2024-2035 Christian-packeur*
+©*2024-2050 SHIRO ONI*
 _____________________________________
 	
 _Don't Forget To Give Star To My Repo_`
