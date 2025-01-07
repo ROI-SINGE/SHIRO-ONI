@@ -58,18 +58,18 @@ router.get('/', async (req, res) => {
 
                let GIFTED_MD_TEXT = `
 ┏━━━━━━━━━━━━━━
-┃DARK--MD SESSION IS 
+┃SHIRO ONI SESSION IS 
 ┃SUCCESSFULLY
 ┃CONNECTED 🎉🎊
 ┗━━━━━━━━━━━━━━━
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || Creator = 𖥘 Christian ICHORO 𖥘
+❶ || Creator = 𖥘 SHIRO ONI 𖥘
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❷ || WhattsApp Channel = https://whatsapp.com/channel/0029Va7jKtW9hXF6d0y1k20Y
+❷ || WhattsApp Channel = https://whatsapp.com/channel/0029Vaknr2JJ93wOtgkFTg15
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-number ADM?👉 https://wa.me/+2250152857921 👈
+number ADM?👉 wa.me/24106408537 👈
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-©*2024-2035 ICHORO*
+©*2024-2050 SHIRO*
 
 _Don't Forget To Give Star To My Repo_`
  await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
