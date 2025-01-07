@@ -43,7 +43,7 @@
 
 1. Cliquez ici la repo et laissez une étoile 🌟 pour m'encourager.
 
-- <a href="https://github.com/ROI-SINGE/SHIRO ONI/fork"><img title="WEB" src="https://img.shields.io/badge/FORK SHIRO•ONI-WEB?color=black&style=for-the-badge&logo=stackshare"></a>
+- <a href="https://github.com/ROI-SINGE/SHIRO-ONI/fork"><img title="WEB" src="https://img.shields.io/badge/FORK SHIRO•ONI-WEB?color=black&style=for-the-badge&logo=stackshare"></a>
 
 2. Obtenir une session 📜📬:
 
