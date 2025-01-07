@@ -1,5 +1,5 @@
 {
-  "name": "dark--md",
+  "name": "SHIRO-ONI",
   "version": "2.5.0",
   "description": "",
   "main": "index.js",
@@ -25,14 +25,14 @@
   "keywords": [
     "bot",
     "Baileys",
-    "DARK",
+    "GUN",
     "whatsapp",
     "whatsapp-bot",
-    "Christian",
-    "Md dark",
-    "Christian-packeur"
+    "ROI-SINGE",
+    "SHIRO ONI",
+    "ROI-SINGE"
   ],
-  "author": "Christian-packeur",
+  "author": "ROI-SINGE",
   "license": "ISC",
   "dependencies": {
     "@hapi/boom": "^10.0.1",
@@ -83,6 +83,6 @@
     "youtube-yts": "^2.0.0",
     "youtubedl-core": "^4.11.7",
     "yt-search": "^2.10.4",
-    "ytdl-core": "github: Christian-packeur/node-ytdl-core"
+    "ytdl-core": "github: ROI-SINGE/node-ytdl-core"
   }
 }
