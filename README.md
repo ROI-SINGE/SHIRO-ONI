@@ -1,6 +1,6 @@
-## ~𝚵𝐘𝚵𝐒 𝚪𝚵𝛁𝚵𝚪𝐒𝚵𝐃~
-
-<h1 align="center">  𝐃𝚵𝚳𝚯𝚴 𝚩𝐋𝚫𝚴𝐂  </h1>
+<h1 align="center"> ~𝚵𝐘𝚵𝐒 𝚪𝚵𝛁𝚵𝚪𝐒𝚵𝐃~ </h1>
+<p align="center"
+  <h1 align="center">  𝐃𝚵𝚳𝚯𝚴 𝚩𝐋𝚫𝚴𝐂  </h1>
 <p align="center"
 
 
