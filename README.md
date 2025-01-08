@@ -14,9 +14,8 @@
 <p align="center">  
 <a href="https://whatsapp.com/channel/0029VaxNPRkFi8xavTfPD71j">
  <img alt="SHIRO ONI" height="300" src="https://files.catbox.moe/aj2r9h.jpeg">
- 
+ </h1> 
   
-</h1> 
 <p align="center">Je vous présente <b>SHIRO ONI</b>, combatant pure </p>
 
 **SHIRO ONI est un bot whatssap multipleservice pour faciliter notre quotidien sur Whatssap**
