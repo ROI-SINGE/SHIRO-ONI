@@ -3,7 +3,6 @@
   <h1 align="center">  𝐃𝚵𝚳𝚯𝚴 𝚩𝐋𝚫𝚴𝐂  </h1>
 <p align="center"
 
-
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=100&pause=1000&color=1BAFBAFF&center=true&width=1000&height=200&lines=SHIRO+ONI" alt="Typing SVG" /></a>
   </p>
 
@@ -12,7 +11,8 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=DAA520&center=true&width=910&height=100&lines= SHIRO+ONI;EYES+REVERSED;YAMAZAKI+CLAN;" alt="Typing SVG" /></a>
   </p>
 
- <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a> 
+ <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a
+ 
 <p align="center">  
 <a href="https://whatsapp.com/channel/0029VaxNPRkFi8xavTfPD71j">
  <img alt="SHIRO ONI" height="300" src="https://files.catbox.moe/aj2r9h.jpeg">
