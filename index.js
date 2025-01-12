@@ -1,9 +1,7 @@
-//base by Mr Kévin Tsh 
+//base by Mr RIPLEY 
 //re-upload? recode? copy code? give credit ya :)
-//YouTube: @alvinblaste...13
-//GitHub: @Kevin-Tsh
-//Whatsapp +243891716833
-//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@alvinblaste...13
+//GitHub: ROI-SINGE
+//Whatsapp +241066408537
 
 const {
    spawn
