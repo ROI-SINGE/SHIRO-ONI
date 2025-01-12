@@ -1,14 +1,14 @@
 {
-  "name": "Queen_Anita-V4",
+  "name": "SHIRO-ONI",
   "version": "4.0.0",
   "description": "A powerful Multi-Device WhatsApp Bot featuring various utilities and media tools.",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --name Queen_Anita-V4 --deep-monitoring --attach",
-    "stop": "pm2 stop Queen_Anita-V4",
-    "restart": "pm2 restart Queen_Anita-V4"
+    "start": "pm2 start index.js --name ROI-SINGE --deep-monitoring --attach",
+    "stop": "pm2 STOP SHIRO-ONI",
+    "restart": "pm2 restart SHIRO-ONI"
   },
-  "author": "David Cyril",
+  "author": "ROI SINGE",
   "license": "MIT",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.9",
