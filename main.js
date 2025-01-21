@@ -1,5 +1,5 @@
-//Creaed By Danny
-//wa.me/255697608274
+//Creaed By Wholl
+//wa.me/241062880842
 
 require('./settings')
 const pino = require('pino')
