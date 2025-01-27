@@ -1,5 +1,5 @@
 while true
 do
-echo "Démarrage Zokou-MD..."
+echo "Démarrage SHIRO-ONI..."
 node index.js
 done
