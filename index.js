@@ -358,7 +358,7 @@ try {
                     : `📩 Chat : @${jid.split('@')[0]}`;
 
                 const header = `
-✨ OVL-MD ANTI-DELETE MSG✨
+✨ SHIRO-ONI ANTI-DELETE MSG✨
 👤 Envoyé par : @${sender.split('@')[0]}
 ❌ Supprimé par : @${auteur_Message.split('@')[0]}
 ⏰ Heure de suppression : ${deletionTime}
@@ -511,12 +511,12 @@ ovl.ev.on("connection.update", async (con) => {
             }
         }
         delay(700);
-      let start_msg = `╭────《 OVL-MD 》─────⊷
+      let start_msg = `╭────《 SHIRO-ONI 》─────⊷
 ⫸  *Préfixe*       : ${prefixe}
 ⫸  *Mode*          : ${config.MODE}
 ⫸  *Commandes*     : ${evt.cmd.length}
 
-             𝙈𝙖𝙙𝙚 𝙗𝙮 Ainz`;
+             𝙈𝙖𝙙𝙚 𝙗𝙮 Wholl`;
      if (ovl.user && ovl.user.id) {
         await ovl.sendMessage(ovl.user.id, { text: start_msg }); 
      }
@@ -597,7 +597,7 @@ app.get('/', (req, res) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OVL-Bot Web Page</title>
+    <title>SHIRO-Bot Web Page</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #121212; font-family: Arial, sans-serif; color: #ffffff; overflow: hidden; }
@@ -609,7 +609,7 @@ app.get('/', (req, res) => {
 </head>
 <body>
     <div class="content">
-        <h1>Bienvenue sur OVL-MD</h1>
+        <h1>Bienvenue sur SHIRO-ONI</h1>
         <p>Votre assistant WhatsApp</p>
     </div>
 </body>
