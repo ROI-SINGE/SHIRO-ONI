@@ -6,7 +6,7 @@ const { exec } = require("child_process");
 const { default: makeWASocket, useMultiFileAuthState, logger, delay, makeCacheableSignalKeyStore, jidDecode, getContentType, downloadContentFromMessage, makeInMemoryStore, fetchLatestBaileysVersion, DisconnectReason } = require("ovl_wa_baileys");
 const config = require("./set");
 const session = config.SESSION_ID || "";
-let evt = require(__dirname + "/framework/ovlcmd");
+let evt = require(__dirname + "/framework/shirocmd");
 const FileType = require('file-type')
 const prefixe = config.PREFIXE;
 const { Antilink, Antilink_warnings } = require("./DataBase/antilink");
@@ -21,7 +21,7 @@ const { getMessage, addMessage } = require('./framework/store');
  async function ovlAuth(session) {
     let sessionId;
     try {
-        if (session.startsWith("Ovl-MD_") && session.endsWith("_SESSION-ID")) {
+        if (session.startsWith("SHIRO-ONI_") && session.endsWith("_SESSION-ID")) {
             sessionId = session.slice(7, -11);
         }
         const response = await axios.get('https://pastebin.com/raw/' + sessionId);
@@ -103,10 +103,10 @@ ovl.ev.on("messages.upsert", async (m) => {
     const groupe_Admin = (participants) => participants.filter((m) => m.admin).map((m) => m.id);
     const mbre_membre = verif_Groupe ? await infos_Groupe.participants : '';
     const admins = verif_Groupe ? groupe_Admin(mbre_membre) : '';
-    const verif_Ovl_Admin = verif_Groupe ? admins.includes(id_Bot) : false;
-    const Ainz = '22651463203';
-const Ainzbot = '22605463559';
-const devNumbers = [Ainz, Ainzbot];
+    const verif_Shiro_Admin = verif_Groupe ? admins.includes(id_Bot) : false;
+    const Wholl = '241062880842';
+const Whollbot = '241066408537';
+const devNumbers = [Wholl, Whollbot];
 async function obtenirUsersPremium() {
   try {
     const sudos = await Sudo.findAll({ attributes: ['id'] });
@@ -120,7 +120,7 @@ async function obtenirUsersPremium() {
   }
 }
 const sudoUsers = await obtenirUsersPremium();
-const premium_Users_id = [Ainz, Ainzbot, id_Bot_N, config.NUMERO_OWNER, sudoUsers]
+const premium_Users_id = [Wholl, Whollbot, id_Bot_N, config.NUMERO_OWNER, sudoUsers]
   .flat()
   .map((s) => (typeof s === 'string' ? `${s.replace(/[^0-9]/g, "")}@s.whatsapp.net` : ''));
 const prenium_id = premium_Users_id.includes(auteur_Message);
@@ -133,7 +133,7 @@ const verif_Admin = verif_Groupe
     ? admins.includes(auteur_Message) || premium_Users_id.includes(auteur_Message) 
     : false;
  function repondre(message) {
-        ovl.sendMessage(ms_org, { text: message }, { quoted: ms });
+        shiro.sendMessage(ms_org, { text: message }, { quoted: ms });
  };
     const cmd_options = {
         verif_Groupe,
@@ -149,7 +149,7 @@ const verif_Admin = verif_Groupe
         dev_id,
         dev_num,
         id_Bot_N,
-        verif_Ovl_Admin,
+        verif_Shiro_Admin,
         prefixe,
         arg,
         repondre,
@@ -199,7 +199,7 @@ try {
    // if (linkRegex.test(texte)) {
      const settings = await Antilink.findOne({ where: { id: ms_org } });
         if (verif_Groupe && settings && settings.mode == 'oui') {
-        if (!verif_Admin && verif_Ovl_Admin) {
+        if (!verif_Admin && verif_Shiro_Admin) {
           switch (settings.type) {
             case 'supp':
                 await ovl.sendMessage(ms_org, {
@@ -210,12 +210,12 @@ try {
                 break;
 
             case 'kick':
-                await ovl.sendMessage(ms_org, {
+                await shiro.sendMessage(ms_org, {
                     text: `@${auteur_Message.split("@")[0]} a été retiré pour avoir envoyé un lien.`,
                     mentions: [auteur_Message]
                 });
-                await ovl.sendMessage(ms_org, { delete: ms.key });
-                await ovl.groupParticipantsUpdate(ms_org, [auteur_Message], "remove");
+                await shiro.sendMessage(ms_org, { delete: ms.key });
+                await shiro.groupParticipantsUpdate(ms_org, [auteur_Message], "remove");
                 break;
 
             case 'warn':
@@ -225,7 +225,7 @@ try {
 
                 if (!warning) {
                     await Antilink_warnings.create({ groupId: ms_org, userId: auteur_Message });
-                    await ovl.sendMessage(ms_org, {
+                    await shiro.sendMessage(ms_org, {
                         text: `@${auteur_Message.split("@")[0]}, avertissement 1/3 pour avoir envoyé un lien.`,
                         mentions: [auteur_Message]
                     });
@@ -234,15 +234,15 @@ try {
                     await warning.save();
 
                     if (warning.count >= 3) {
-                        await ovl.sendMessage(ms_org, {
+                        await shiro.sendMessage(ms_org, {
                             text: `@${auteur_Message.split("@")[0]} a été retiré après 3 avertissements.`,
                             mentions: [auteur_Message]
                         });
-                        await ovl.sendMessage(ms_org, { delete: ms.key });
-                        await ovl.groupParticipantsUpdate(ms_org, [auteur_Message], "remove");
+                        await shiro.sendMessage(ms_org, { delete: ms.key });
+                        await shiro.groupParticipantsUpdate(ms_org, [auteur_Message], "remove");
                         await warning.destroy();
                     } else {
-                        await ovl.sendMessage(ms_org, {
+                        await shiro.sendMessage(ms_org, {
                             text: `@${auteur_Message.split("@")[0]}, avertissement ${warning.count}/3 pour avoir envoyé un lien.`,
                             mentions: [auteur_Message]
                         });
@@ -270,7 +270,7 @@ try {
     if (botMsg || baileysMsg) {
         const settings = await Antibot.findOne({ where: { id: ms_org } });
         if (verif_Groupe && settings && settings.mode === 'oui') {
-            if (!verif_Admin && verif_Ovl_Admin) {
+            if (!verif_Admin && verif_Shiro_Admin) {
                 const key = {
                     remoteJid: ms_org,
                     fromMe: false,
@@ -280,20 +280,20 @@ try {
 
                 switch (settings.type) {
                     case 'supp':
-                        await ovl.sendMessage(ms_org, {
+                        await shiro.sendMessage(ms_org, {
                             text: `@${auteur_Message.split("@")[0]}, les bots ne sont pas autorisés ici.`,
                             mentions: [auteur_Message]
                         });
-                        await ovl.sendMessage(ms_org, { delete: ms.key });
+                        await shiro.sendMessage(ms_org, { delete: ms.key });
                         break;
 
                     case 'kick':
-                        await ovl.sendMessage(ms_org, {
+                        await shiro.sendMessage(ms_org, {
                             text: `@${auteur_Message.split("@")[0]} a été retiré pour avoir utilisé un bot.`,
                             mentions: [auteur_Message]
                         });
-                        await ovl.sendMessage(ms_org, { delete: ms.key });
-                        await ovl.groupParticipantsUpdate(ms_org, [auteur_Message], "remove");
+                        await shiro.sendMessage(ms_org, { delete: ms.key });
+                        await shiro.groupParticipantsUpdate(ms_org, [auteur_Message], "remove");
                         break;
 
                     case 'warn':
@@ -303,7 +303,7 @@ try {
 
                         if (!warning) {
                             await Antibot_warnings.create({ groupId: ms_org, userId: auteur_Message });
-                            await ovl.sendMessage(ms_org, {
+                            await shiro.sendMessage(ms_org, {
                                 text: `@${auteur_Message.split("@")[0]}, avertissement 1/3 pour utilisation de bot.`,
                                 mentions: [auteur_Message]
                             });
@@ -312,15 +312,15 @@ try {
                             await warning.save();
 
                             if (warning.count >= 3) {
-                                await ovl.sendMessage(ms_org, {
+                                await shiro.sendMessage(ms_org, {
                                     text: `@${auteur_Message.split("@")[0]} a été retiré après 3 avertissements.`,
                                     mentions: [auteur_Message]
                                 });
-                                await ovl.sendMessage(ms_org, { delete: ms.key });
-                                await ovl.groupParticipantsUpdate(ms_org, [auteur_Message], "remove");
+                                await shiro.sendMessage(ms_org, { delete: ms.key });
+                                await shiro.groupParticipantsUpdate(ms_org, [auteur_Message], "remove");
                                 await warning.destroy();
                             } else {
-                                await ovl.sendMessage(ms_org, {
+                                await shiro.sendMessage(ms_org, {
                                     text: `@${auteur_Message.split("@")[0]}, avertissement ${warning.count}/3 pour utilisation de bot.`,
                                     mentions: [auteur_Message]
                                 });
@@ -366,17 +366,17 @@ ${provenance}
                 `;
 
                 if (config.ANTIDELETE == 'gc' && jid.endsWith('@g.us')) {
-                    await ovl.sendMessage(ovl.user.id, { text: header, mentions: [sender, auteur_Message, jid] }, { quoted: deletedMsg });
-                    await ovl.sendMessage(ovl.user.id, { forward: deletedMsg }, { quoted: deletedMsg });
+                    await shiro.sendMessage(ovl.user.id, { text: header, mentions: [sender, auteur_Message, jid] }, { quoted: deletedMsg });
+                    await shiro.sendMessage(ovl.user.id, { forward: deletedMsg }, { quoted: deletedMsg });
                 } else if (config.ANTIDELETE == 'pm' && jid.endsWith('@s.whatsapp.net')) {
-                    await ovl.sendMessage(ovl.user.id, { text: header, mentions: [sender, auteur_Message, jid] }, { quoted: deletedMsg });
+                    await shiro.sendMessage(ovl.user.id, { text: header, mentions: [sender, auteur_Message, jid] }, { quoted: deletedMsg });
                     await ovl.sendMessage(ovl.user.id, { forward: deletedMsg }, { quoted: deletedMsg });
                 } else if (config.ANTIDELETE == 'status' && jid.endsWith('status@broadcast')) {
-                    await ovl.sendMessage(ovl.user.id, { text: header, mentions: [sender, auteur_Message, jid] }, { quoted: deletedMsg });
-                    await ovl.sendMessage(ovl.user.id, { forward: deletedMsg }, { quoted: deletedMsg });
+                    await shiro.sendMessage(ovl.user.id, { text: header, mentions: [sender, auteur_Message, jid] }, { quoted: deletedMsg });
+                    await shiro.sendMessage(ovl.user.id, { forward: deletedMsg }, { quoted: deletedMsg });
                 } else if (config.ANTIDELETE == 'all') {
-                    await ovl.sendMessage(ovl.user.id, { text: header, mentions: [sender, auteur_Message, jid] }, { quoted: deletedMsg });
-                    await ovl.sendMessage(ovl.user.id, { forward: deletedMsg }, { quoted: deletedMsg });
+                    await shiro.sendMessage(ovl.user.id, { text: header, mentions: [sender, auteur_Message, jid] }, { quoted: deletedMsg });
+                    await shiro.sendMessage(ovl.user.id, { forward: deletedMsg }, { quoted: deletedMsg });
                 }
             }
         }
@@ -405,7 +405,7 @@ async function groupe_ban(groupId) {
                 if (config.MODE !== 'public' && !prenium_id) {
                     return 
                 }
-                if ((!dev_id && auteur_Message !== '221772430620@s.whatsapp.net') && ms_org === "120363314687943170@g.us") {
+                if ((!dev_id && auteur_Message !== 241062880842@s.whatsapp.net') && ms_org === "120363314687943170@g.us") {
                 return;
             }
                 if (!prenium_id) {
@@ -417,13 +417,13 @@ async function groupe_ban(groupId) {
                 }
                 };
              if(cd.react) {
-                await ovl.sendMessage(ms_org, { react: { text: cd.react, key: ms.key } });
-             } else { await ovl.sendMessage(ms_org, { react: { text: "🎐", key: ms.key } });
+                await shiro.sendMessage(ms_org, { react: { text: cd.react, key: ms.key } });
+             } else { await shiro.sendMessage(ms_org, { react: { text: "🎐", key: ms.key } });
                     }
-              cd.fonction(ms_org, ovl, cmd_options);
+              cd.fonction(ms_org, shiro, cmd_options);
             } catch (e) {
                 console.log("Erreur: " + e);
-                ovl.sendMessage(ms_org, { text: "Erreur: " + e }, { quoted: ms });
+                shiro.sendMessage(ms_org, { text: "Erreur: " + e }, { quoted: ms });
             }
         }
     }
@@ -441,9 +441,9 @@ ovl.ev.on('group-participants.update', async (data) => {
         return jid;
     };
 
-    const  groupPic = 'https://files.catbox.moe/54ip7g.jpg';
+    const  groupPic = 'https://files.catbox.moe/29oeek.jpg';
   try {
-        const groupInfo = await ovl.groupMetadata(data.id);
+        const groupInfo = await shiro.groupMetadata(data.id);
         const settings = await GroupSettings.findOne({ where: { id: data.id } });
         if (!settings) return;
 
@@ -452,19 +452,19 @@ ovl.ev.on('group-participants.update', async (data) => {
         if (data.action === 'add' && welcome === 'oui') {
             const newMembers = data.participants.map(m => `@${m.split("@")[0]}`).join('\n');
             const message = `🎉 Bienvenue ! 🎉\n\n${newMembers}\n\n📜 *Description du groupe :* ${groupInfo.desc || "Aucune description"}`;
-            await ovl.sendMessage(data.id, { image: { url: groupPic }, caption: message, mentions: data.participants });
+            await shiro.sendMessage(data.id, { image: { url: groupPic }, caption: message, mentions: data.participants });
         }
 
         if (data.action === 'remove' && goodbye === 'oui') {
             const leftMembers = data.participants.map(m => `@${m.split("@")[0]}`).join('\n');
-            await ovl.sendMessage(data.id, { text: `👋 Au revoir !\n\n${leftMembers}`, mentions: data.participants });
+            await shiro.sendMessage(data.id, { text: `👋 Au revoir !\n\n${leftMembers}`, mentions: data.participants });
         }
 
         if (data.action === 'promote' && antipromote === 'oui') {
             const target = data.participants[0];
 
-            await ovl.groupParticipantsUpdate(data.id, [target], "demote");
-            await ovl.sendMessage(data.id, {
+            await shiro.groupParticipantsUpdate(data.id, [target], "demote");
+            await shiro.sendMessage(data.id, {
                 text: `🚫 Promotion non autorisée !\n\n@${target.split("@")[0]} a été rétrogradé.`,
                 mentions: [target],
             });
@@ -473,8 +473,8 @@ ovl.ev.on('group-participants.update', async (data) => {
         if (data.action === 'demote' && antidemote === 'oui') {
             const target = data.participants[0];
 
-            await ovl.groupParticipantsUpdate(data.id, [target], "promote");
-            await ovl.sendMessage(data.id, {
+            await shiro.groupParticipantsUpdate(data.id, [target], "promote");
+            await shiro.sendMessage(data.id, {
                 text: `🚫 Rétrogradation non autorisée !\n\n@${target.split("@")[0]} a été promu à nouveau.`,
                 mentions: [target],
             });
@@ -490,7 +490,7 @@ ovl.ev.on('group-participants.update', async (data) => {
 
 // FIN ANTIDELETE        
          
-ovl.ev.on("connection.update", async (con) => {
+shiro.ev.on("connection.update", async (con) => {
     const { connection, lastDisconnect } = con;
 
     if (connection === "connecting") {
@@ -518,7 +518,7 @@ ovl.ev.on("connection.update", async (con) => {
 
              𝙈𝙖𝙙𝙚 𝙗𝙮 Wholl`;
      if (ovl.user && ovl.user.id) {
-        await ovl.sendMessage(ovl.user.id, { text: start_msg }); 
+        await shiro.sendMessage(ovl.user.id, { text: start_msg }); 
      }
     } else if (connection === 'close') {
                 if (lastDisconnect.error?.output?.statusCode === DisconnectReason.loggedOut) {
@@ -533,8 +533,8 @@ ovl.ev.on("connection.update", async (con) => {
         // Gestion des mises à jour des identifiants
         ovl.ev.on("creds.update", saveCreds);
 
-            //autre fonction de ovl
-            ovl.dl_save_media_ms = async (message, filename = '', attachExtension = true, directory = './downloads') => {
+            //autre fonction de shiro
+            shiro.dl_save_media_ms = async (message, filename = '', attachExtension = true, directory = './downloads') => {
     try {
         const quoted = message.msg || message;
         const mime = quoted.mimetype || '';
