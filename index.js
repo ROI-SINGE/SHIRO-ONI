@@ -1,5 +1,5 @@
-// 𝐁𝐘 𝐂𝐑𝐀𝐙𝐘 𝐃𝐄𝐕 𝐆𝐈𝐕𝐄 𝐂𝐑𝐄𝐃𝐈𝐓:
-//𝐖𝐀.𝐌𝐄/24165730123
+// 𝐁𝐘 𝚫𝚴𝐆𝚵𝐋𝐔𝐒 𝐃𝐄𝐕 𝐆𝐈𝐕𝐄 𝐂𝐑𝐄𝐃𝐈𝐓:
+//𝐖𝐀.𝐌𝐄/241062880842
 
 const {
 default: makeWASocket,
@@ -32,12 +32,12 @@ const Crypto = require('crypto')
 const path = require('path')
 const prefix = config.PREFIX
 
-const ownerNumber = ['24165730123']
+const ownerNumber =['241062880842']
 
 //===========SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
 if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID.replace("CRAZY-MD-V1~", '');
+const sessdata = config.SESSION_ID.replace("ANGELUS-MD~", '');
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
@@ -51,7 +51,7 @@ const port = process.env.PORT || 9090;
 
 
 async function connectToWA() {
-console.log("CONNECTING CRAZY_MD-V1🧬...");
+console.log("CONNECTING ANGELUS_MD-V1🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -79,19 +79,19 @@ require("./plugins/" + plugin);
 }
 });
 console.log('PLUGINS INSTALED SUCCESSFULY✅')
-console.log('CRAZY_MD-V1 CONNECTED..🍒')
+console.log('ANGELUS_MD-V1 CONNECTED..🍒')
 
 let up = `*╭──────────────●●►*
 > ↬𝙲𝚁𝙰𝚉𝚈 𝙼𝙳 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝚃𝚈𝙿𝙴 .𝙼𝙴𝙽𝚄 𝚃𝙾 𝚂𝙷𝙾𝚆 𝙰𝙻𝙻 𝙲𝙼𝙳 𝙾𝙵 𝚃𝙷𝙴 𝙱𝙾𝚃ᥫᩣ
 
- *𝙹𝙾𝙸𝙽 𝙲𝚁𝙰𝚉𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝙵𝙾𝚁 𝙼𝙾𝚁𝙴 𝚄𝙿𝙳𝙰𝚃𝙴 𝙰𝙽𝙳 𝙼𝙾𝚁𝙴 𝚃𝚁𝙸𝙲𝙺𝚂💫:*
+ *𝙹𝙾𝙸𝙽 ANGELUS 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝙵𝙾𝚁 𝙼𝙾𝚁𝙴 𝚄𝙿𝙳𝙰𝚃𝙴 𝙰𝙽𝙳 𝙼𝙾𝚁𝙴 𝚃𝚁𝙸𝙲𝙺𝚂💫:*
 
 *https://whatsapp.com/channel/0029Vb4QhPj4NVipeOtyo02n*
 
-*╭☛ 𝐂𝐑𝐀𝐙𝐘 𝐌𝐃 𝐕1 ☚╮*
-*│✿🥇 - 𝚁𝙴𝙿𝙾 𝙽𝙰𝙼𝙴:* *𝙲𝚁𝙰𝚉𝚈 𝙼𝙳 𝚅1*
+*╭☛ 𝚫𝚴𝐆𝚵𝐋𝐔𝐒 𝐌𝐃 ☚╮*
+*│✿🥇 - 𝚁𝙴𝙿𝙾 𝙽𝙰𝙼𝙴:* *ANGRLUS 𝙼𝙳*
 *│✿🎃 - 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽:* *THE WORLD BEST WHATSAPP BOT♻️*
-*│✿🎐 - 𝙳𝙴𝚅:* *𝙲𝚁𝙰𝚉𝚈 𝙳𝙴𝚅*
+*│✿🎐 - 𝙳𝙴𝚅:* *ABGELUS*
 
 *𝐘𝐎𝐔𝐑 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐂𝐓𝐈𝐕𝐄 𝐓𝐘𝐏𝐄 𝐌𝐄𝐍𝐔*\n\n*PREFIX: ${prefix}*
 
@@ -177,7 +177,7 @@ m.react("🦋")
    }
 
 if(senderNumber.includes("447783770746")){
-if(isReact) return
+if(isReact) returnU
 m.react("🎀")
    }
 
@@ -263,7 +263,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("CRAZY MD START NOW..😍");
+res.send("ABGELUS MD START NOW..😍");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
